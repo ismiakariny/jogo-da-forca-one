@@ -26,11 +26,7 @@ main {
     margin: 0 auto;
 }
 
-#tela-inicial {
-
-}
-
-.botoes-de-entrada {
+.botoes-de-inicio {
     display: flex;
     flex-direction: column;
     justify-content: safe center;
@@ -85,6 +81,101 @@ main {
 
 .invisivel {
     display: none;
+}
+
+#tela-adicionar {
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+#entrada-do-texto {
+    width: 94%;
+    height: 92%;
+    margin: 3% auto;
+    padding: 0.5em;
+    border: none;
+    font-family: 'Inter';
+    font-size: 2em;
+    font-weight: 400;
+    color: #0A3871;
+    background: none;
+}
+
+textarea[name=adicionar-texto] {
+  resize: none;
+}
+
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+::placeholder {
+    font-family: 'Inter';
+    font-weight: 400;
+    color: #0A3871;
+}
+
+.info {
+    display: flex;
+    font-family: 'Inter';
+    font-weight: 400;
+    color: #495057;
+    font-size: 0.75em;
+    padding-bottom: 1em;
+}
+
+.botoes-de-entrada {
+    display: flex;
+    flex-direction: row;
+    justify-content: safe center;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.botao-salvar {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    color: #FFFFFF;
+    text-align: center;
+    width: 50%;
+    margin-right: 0.25em;
+    max-width: 20em;
+    min-width: 9em;
+    padding: 1em;
+    background: #0A3871;
+    border-radius: 24px;
+    border: 2px solid #0A3871;
+}
+
+.botao-salvar:hover {
+    background: #0E52A4;
+}
+
+
+.botao-cancelar {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    color: #0A3871;
+    text-align: center;
+    width: 50%;
+    margin-left: 0.25em;
+    max-width: 20em;
+    min-width: 9em;
+    padding: 1em;
+    border-radius: 24px;
+    background: none;
+    border: 2px solid #0A3871;
+}
+
+.botao-cancelar:hover {
+    background: #CCD5E0;
 }
 
 footer {
