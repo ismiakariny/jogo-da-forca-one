@@ -1,0 +1,120 @@
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: #F3F5FC;
+}
+
+header {
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 5%;
+    padding-top: 2em;
+}
+
+main {
+    height: 500px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#tela-inicial {
+
+}
+
+.botoes-de-entrada {
+    display: flex;
+    flex-direction: column;
+    justify-content: safe center;
+    align-items: center;
+    height: 500px;
+    margin: 0 auto;
+    background: none;
+}
+
+.botao-comecar {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    color: #FFFFFF;
+    text-align: center;
+    width: 50%;
+    max-width: 20em;
+    min-width: 9em;
+    padding: 2em;
+    margin-bottom: 1em;
+    background: #0A3871;
+    border-radius: 24px;
+    border: 2px solid #0A3871;
+}
+
+.botao-comecar:hover {
+    background: #0E52A4;
+}
+
+
+.botao-adicionar {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    color: #0A3871;
+    text-align: center;
+    width: 50%;
+    max-width: 20em;
+    min-width: 9em;
+    padding: 2em;
+    margin-top: 1em;
+    border-radius: 24px;
+    background: none;
+    border: 2px solid #0A3871;
+}
+
+.botao-adicionar:hover {
+    background: #CCD5E0;
+}
+
+.invisivel {
+    display: none;
+}
+
+footer {
+    display: inline-block;
+    margin-top: auto;
+    width: 100%;
+    min-width: 100%;
+}
+
+#linha-horizontal {
+    border-top: 1px solid #0A3871;
+}
+
+.copyright {
+    text-align: center;
+    color: #000000;
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+#link-footer {
+    text-decoration: none;
+    color: #0A3871;
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+}
