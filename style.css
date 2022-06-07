@@ -83,7 +83,75 @@ main {
     display: none;
 }
 
+.tela {
+    width: 600px;
+    height: 400px;
+    display: inline-block;
+    position: absolute;    
+    padding: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #F3F5FC;
+}
+
+.botoes-do-tabuleiro {
+    display: flex;
+    flex-direction: row;
+    justify-content: safe center;
+    align-items: flex-end;
+    height: 520px;
+    margin: 0 auto;
+    background: none;
+}
+
+.botao-novo {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    color: #FFFFFF;
+    text-align: center;
+    width: 50%;
+    margin-right: 0.25em;
+    max-width: 20em;
+    min-width: 9em;
+    padding: 1em;
+    background: #0A3871;
+    border-radius: 24px;
+    border: 2px solid #0A3871;
+}
+
+.botao-novo:hover {
+    background: #0E52A4;
+}
+
+
+.botao-desistir {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    color: #0A3871;
+    text-align: center;
+    width: 50%;
+    margin-left: 0.25em;
+    max-width: 20em;
+    min-width: 9em;
+    padding: 1em;
+    border-radius: 24px;
+    background: none;
+    border: 2px solid #0A3871;
+}
+
+.botao-desistir:hover {
+    background: #CCD5E0;
+}
+
 #tela-adicionar {
+    position: absolute;
     width: 600px;
     height: 400px;
     margin: 0 auto;
