@@ -2,7 +2,10 @@ var telaInicial = document.querySelector('#tela-inicial');
 var botaoComecar = document.querySelector('.botao-comecar');
 var botaoAdicionar = document.querySelector('.botao-adicionar');
 var telaDoJogo = document.querySelector('#tela-do-jogo');
+var botaoNovo = document.querySelector('.botao-novo');
+var botaoDesistir = document.querySelector('.botao-desistir');
 var telaAdicionar = document.querySelector('#tela-adicionar')
+var palavraInserida = document.querySelector('#entrada-do-texto');
 var botaoSalvar = document.querySelector('.botao-salvar');
 var botaoCancelar = document.querySelector('.botao-cancelar');
 
@@ -17,6 +20,7 @@ botaoComecar.addEventListener('click', function(){
         telaDoJogo.classList.remove('invisivel');
     }
 
+    desenhaTraco(escolherPalavraSecreta());
 });
 
 botaoAdicionar.addEventListener('click', function() {
@@ -27,6 +31,8 @@ botaoAdicionar.addEventListener('click', function() {
     if($('#tela-adicionar').hasClass('invisivel')) {
         telaAdicionar.classList.remove('invisivel');
     }
+    palavraSecreta = "";
+    erros = -1;
 })
 
 
@@ -40,6 +46,10 @@ botaoSalvar.addEventListener('click', function(){
         alert("Jogo da forca foi iniciado!")
     }
 
+    palavras.push(palavraInserida.value);
+    console.log(palavras);
+    limpaTela()
+    desenhaTraco(escolherPalavraSecreta());
 });
 
 botaoCancelar.addEventListener('click', function() {
@@ -50,14 +60,22 @@ botaoCancelar.addEventListener('click', function() {
     if($('#tela-inicial').hasClass('invisivel')) {
         telaInicial.classList.remove('invisivel');
     }
+    limpaTela();
 })
 
+botaoNovo.addEventListener('click', function() {
+    limpaTela()
+    desenhaTraco(escolherPalavraSecreta());
+})
 
-// TABULEIRO E FUNCIONALIDADES
+botaoDesistir.addEventListener('click', function() {
+    if ($('#tela-do-jogo').not('.invisivel').length) {
+        telaDoJogo.classList.add('invisivel');        
+    }
 
-var tela = document.querySelector('canvas');
-var pincel = tela.getContext('2d');
+    if($('#tela-inicial').hasClass('invisivel')) {
+        telaInicial.classList.remove('invisivel');
+    }
 
-function desenhaTabuleiro (){
-
-};
+    limpaTela();
+})
