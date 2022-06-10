@@ -84,8 +84,6 @@ main {
 }
 
 .tela {
-    width: 600px;
-    height: 400px;
     display: inline-block;
     position: absolute;    
     padding: 0;
@@ -276,4 +274,16 @@ footer {
         margin: 0 auto;
     }
 
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+
+    .botoes-do-tabuleiro {
+        margin-top: 20%;
+        margin-bottom: 5%;
+        display: flex;
+        justify-content: safe normal;
+        align-items: flex-end;
+    }
 }
