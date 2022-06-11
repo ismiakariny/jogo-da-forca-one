@@ -49,6 +49,8 @@ botaoSalvar.addEventListener('click', function(){
     palavras.push(palavraInserida.value);
     console.log(palavras);
     limpaTela()
+    letras = [];
+    letrasCorretas = [];
     desenhaTraco(escolherPalavraSecreta());
 });
 

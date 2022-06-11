@@ -3,7 +3,7 @@
 var tela = document.querySelector('.tela');
 var canvas = document.querySelector('canvas');
 var pincel = tela.getContext('2d');
-var palavras = ['ALURA', 'ORACLE', 'HTML', 'PROGRAMA', 'CSS'];
+var palavras = ['ALURA', 'ORACLE', 'BARRACA', 'FESTA', 'ESQUILO', 'PIANISTA', 'BARRIGA', 'BURRO', 'CACHORRO', 'CARRO', 'CORRIDA', 'COBERTOR', 'COLAR', 'CORDA', 'FORMIGA', 'GARFO', 'HARPA', 'MARTELO', 'FAZENDA', 'GASOLINA', 'GULOSO', 'PARAFUSO', 'CADEIRA', 'RAPOSA', 'BANANA' ];
 var letras = [];
 var letrasCorretas = [];
 var palavraCorreta = "";
@@ -109,6 +109,17 @@ document.onkeydown = (e) => {
             for(let i = 0; i < palavraSecreta.length; i++) {
                 if(palavraSecreta[i] === letra) {
                     escreverLetraCorreta(i)
+
+                    letrasCorretas.push(palavraSecreta[i]);
+
+                    if(letrasCorretas.length == palavraSecreta.length) {
+                        console.log("Venceu!");
+                        desenhaTexto(venceu, 10, 150, '#00B300');
+                        console.log("letrasCorretas: " + letrasCorretas);
+                        letras = [];
+                        letrasCorretas = [];
+                    }
+
                 }
             }
         } else {
@@ -125,6 +136,8 @@ document.onkeydown = (e) => {
 
 function limpaTela() {
     pincel.clearRect(0, 0, canvas.width, canvas.height);
+    letras = [];
+    letrasCorretas = [];
     erros = 9;
     return erros;
 }
@@ -168,14 +181,7 @@ function desenhaForca() {
         desenhaLinha(350, 190, 300, 230);
     } else if(erros == 1) {
         desenhaLinha(350, 190, 400, 230);
-    } else if(erros == 0) {
         console.log("Perdeu!");
         desenhaTexto(perdeu, 450, 150, '#FF0000');
     }
 }
-
-//if(palavraCorreta.length == palavraSecreta.length) {
-//    console.log("Venceu!" + palavraCorreta.value);
-//    desenhaTexto(venceu, 10, 150, '#00B300');    
-//}
-
