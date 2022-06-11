@@ -111,14 +111,14 @@ document.onkeydown = (e) => {
                     escreverLetraCorreta(i)
                 }
             }
+        } else {
+            if (!verificarLetraCorreta(e.key))
+                return
+                adicionarLetraIncorreta(letra)
+                escreverLetraIncorreta(letra, erros)
+                desenhaForca();
         }
-    } else {
-        if (!verificarLetraCorreta(e.key))
-            return
-            adicionarLetraIncorreta(letra)
-            escreverLetraIncorreta(letra, erros)
-            desenhaForca();
-    }
+    } 
 }
 
 // LIMPAR TELA
@@ -174,13 +174,8 @@ function desenhaForca() {
     }
 }
 
-    //var bonecoParteUm = desenhaLinha(200, 230, 200, 10);
-    //var bonecoParteDois = desenhaLinha(200, 10, 350, 10);
-    //var bonecoParteTres = desenhaCabeca();
-    //var bonecoParteQuatro = desenhaLinha(350, 70, 350, 190);
-    //var bonecoParteCinco = desenhaLinha(350, 70, 300, 105);
-    //var bonecoParteSeis = desenhaLinha(350, 70, 400, 105)
-    //var bonecoParteSete = desenhaLinha(350, 190, 300, 230);
-    //var bonecoParteOito = desenhaLinha(350, 190, 400, 230);
+//if(palavraCorreta.length == palavraSecreta.length) {
+//    console.log("Venceu!" + palavraCorreta.value);
+//    desenhaTexto(venceu, 10, 150, '#00B300');    
+//}
 
-    //var partesBoneco = [bonecoParteUm, bonecoParteDois, bonecoParteTres, bonecoParteQuatro, bonecoParteCinco, bonecoParteSeis, bonecoParteSete, bonecoParteOito];
