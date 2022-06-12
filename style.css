@@ -84,10 +84,9 @@ main {
 }
 
 .tela {
-    display: inline-block;
-    position: absolute;    
+    display: block; 
     padding: 0;
-    margin: auto;
+    margin: 0 auto;
     top: 0;
     bottom: 0;
     left: 0;
@@ -99,8 +98,8 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: safe center;
+    height: 70px;
     align-items: flex-end;
-    height: 520px;
     margin: 0 auto;
     background: none;
 }
@@ -184,11 +183,14 @@ textarea:focus, input:focus {
 
 .info {
     display: flex;
+    justify-content: left;
+    width: 600px;
+    margin: 1em auto;
     font-family: 'Inter';
     font-weight: 400;
     color: #495057;
     font-size: 0.75em;
-    padding-bottom: 1em;
+    padding: 1em auto;
 }
 
 .botoes-de-entrada {
