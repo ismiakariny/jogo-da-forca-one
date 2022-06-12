@@ -3,13 +3,13 @@
 var tela = document.querySelector('.tela');
 var canvas = document.querySelector('canvas');
 var pincel = tela.getContext('2d');
-var palavras = ['ALURA', 'ORACLE', 'BARRACA', 'FESTA', 'ESQUILO', 'PIANISTA', 'BARRIGA', 'BURRO', 'CACHORRO', 'CARRO', 'CORRIDA', 'COBERTOR', 'COLAR', 'CORDA', 'FORMIGA', 'GARFO', 'HARPA', 'MARTELO', 'FAZENDA', 'GASOLINA', 'GULOSO', 'PARAFUSO', 'CADEIRA', 'RAPOSA', 'BANANA' ];
+var palavras = ['ESQUILO', 'BURRO', 'CACHORRO', 'FORMIGA', 'RAPOSA', 'GATO', 'VACA', 'BEZERRO', 'BALEIA', 'CAVALO', 'GALINHA', 'CABRA', 'ARANHA', 'MORCEGO', 'COBRA', 'CORUJA', 'GOLFINHO'];
 var letras = [];
 var letrasCorretas = [];
 var palavraCorreta = "";
 var palavraSecreta = "";
 var letra = "";
-var erros = 9;
+var erros = 8;
 var tentativas = 0;
 var venceu = 'Você venceu';
 var perdeu = 'Você perdeu';
@@ -112,12 +112,13 @@ document.onkeydown = (e) => {
 
                     letrasCorretas.push(palavraSecreta[i]);
 
-                    if(letrasCorretas.length == palavraSecreta.length) {
+                    if((letrasCorretas.length == palavraSecreta.length) && (erros > 0)) {
                         console.log("Venceu!");
                         desenhaTexto(venceu, 10, 150, '#00B300');
                         console.log("letrasCorretas: " + letrasCorretas);
                         letras = [];
                         letrasCorretas = [];
+                        erros = -1;
                     }
 
                 }
@@ -138,7 +139,7 @@ function limpaTela() {
     pincel.clearRect(0, 0, canvas.width, canvas.height);
     letras = [];
     letrasCorretas = [];
-    erros = 9;
+    erros = 8;
     return erros;
 }
 
@@ -159,29 +160,31 @@ function desenhaCirculo(x, y, raio) {
 
     pincel.strokeStyle = '#0A3871';
     pincel.lineWidth = 3;
+    pincel.lineCap = 'round';
+    pincel.lineJoin = 'round';
     pincel.beginPath();
     pincel.arc(x, y, raio, 0, 2 * Math.PI);
     pincel.stroke();
 } 
 
 function desenhaForca() {
-    if(erros == 8) {
+    if(erros == 7) {
         desenhaLinha(200, 230, 200, 10);
-    } else if(erros == 7) {
-        desenhaLinha(200, 10, 350, 10);
     } else if(erros == 6) {
-        desenhaCirculo(350, 40, 30);
+        desenhaLinha(200, 10, 350, 10);
     } else if(erros == 5) {
-        desenhaLinha(350, 70, 350, 190);
+        desenhaCirculo(350, 40, 30);
     } else if(erros == 4) {
-        desenhaLinha(350, 70, 300, 105);
+        desenhaLinha(350, 70, 350, 190);
     } else if(erros == 3) {
-        desenhaLinha(350, 70, 400, 105);
+        desenhaLinha(350, 70, 300, 105);
     } else if(erros == 2) {
-        desenhaLinha(350, 190, 300, 230);
+        desenhaLinha(350, 70, 400, 105);
     } else if(erros == 1) {
+        desenhaLinha(350, 190, 300, 230);
+    } else if(erros == 0) {
         desenhaLinha(350, 190, 400, 230);
         console.log("Perdeu!");
-        desenhaTexto(perdeu, 450, 150, '#FF0000');
+        desenhaTexto(perdeu, 440, 150, '#FF0000');
     }
 }

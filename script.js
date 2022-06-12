@@ -43,7 +43,6 @@ botaoSalvar.addEventListener('click', function(){
 
     if($('#tela-do-jogo').hasClass('invisivel')) {
         telaDoJogo.classList.remove('invisivel');
-        alert("Jogo da forca foi iniciado!")
     }
 
     palavras.push(palavraInserida.value);
