@@ -1,2 +1,15 @@
-# jogo-da-forca-one
-Desafio realizado junto ao programa Oracle Next Education. A proposta é para a criação de uma aplicação que criptografa textos. Nesta versão, o código de criptografia foi desenvolvido pelos instrutores do programa.  Requisitos: - Deve funcionar apenas com letras minúsculas; - Não devem ser utilizados letras com acentos nem caracteres especiais; - Deve ser possível converter uma palavra para a versão criptografada e também retornar uma palavra criptografada para a versão original. Por exemplo: "gato" => "gaitober" OU gaitober" => "gato".  A página deve ter campos para inserção do texto a ser criptografado ou descriptografado, e a pessoa usuária deve poder escolher entre as duas opções. O resultado deve ser exibido na tela.  Extras: - Um botão que copie o texto criptografado/descriptografado para a área de transferência.
+Desafio realizado junto ao programa Oracle Next Education, parceria Oracle + Alura. A proposta é para a criação de um Jogo da Forca. Nesta versão, o código de verificação e adição das letras no canvas foi adaptado a partir de uma base desenvolvida pelos instrutores do programa ONE.
+
+Requisitos:
+- Deve funcionar só com letras maiúsculas;
+- Não devem ser utilizadas letras com acentos nem caracteres especiais;
+- Ao completar o desenho da forca, deve ser exibida uma mensagem na tela de "Fim de Jogo";
+- Se completar a palavra correta antes de acabarem as tentativas, deve ser exibida na tela a mensagem "Você Venceu. Parabéns!";
+- A página deve ter os traços indicando cada letra da palavra, separados por espaço;
+- A página deve ter um botão de "Iniciar Jogo" para começar o jogo;
+- Só deve ser possívél escrever letras (os números não serão válidos)
+- As letras erradas devem aparecer na tela, mas não podem aparecer repetidamente;
+- As letras corretas devem ser mostradas na tela acima dos traços, nas posições corretas em relação à palavra.
+
+Extras:
+- A página deve conter um campo para inserção de texto com a finalidade de adicionar novas palavras ao jogo, e um botão "Adicionar nova palavra".
